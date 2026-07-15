@@ -730,3 +730,64 @@
   gap: 1.5rem;
   align-items: center;
 }
+
+/* ===========================
+   RESPONSIVE STYLES
+   =========================== */
+@media (max-width: 1400px) {
+  .devices-container {
+    flex-wrap: wrap;
+    transform: scale(0.65);
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .split-view-page {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-preview {
+    overflow-y: visible;
+    padding: 2rem 1rem;
+  }
+
+  .floating-pills-widget {
+    position: static;
+    float: none;
+    margin: 0 auto 2rem;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .devices-container {
+    flex-direction: column;
+    transform: scale(1);
+    margin-bottom: 0;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .desktop-frame {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .mobile-frame {
+    width: 320px;
+  }
+}
