@@ -1,0 +1,251 @@
+.play-container {
+  min-height: calc(100vh - 80px);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menu */
+.game-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.game-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: var(--accent-primary);
+}
+
+.game-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.game-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.game-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Shared Game Layout */
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 2rem;
+  transition: color var(--transition-fast);
+  padding: 0;
+}
+
+.back-btn:hover {
+  color: var(--text-primary);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.game-header h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.progress-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.progress-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background-color var(--transition-fast);
+}
+
+/* Spin Game */
+.spin-game {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.spin-wheel-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 2rem auto 4rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spin-wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 4px solid var(--bg-primary);
+}
+
+.spin-wheel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 25%;
+  background-color: var(--bg-primary);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.spin-pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid var(--text-primary);
+  z-index: 10;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.spin-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Popper Game */
+.popper-game {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+}
+
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 50;
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.1);
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transition: transform 0.1s;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+.bubble:active {
+  transform: scale(0.9);
+}
+
+/* Add a pseudo element to make it look like a glossy bubble */
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: -100px;
+    transform: translateX(0) rotate(0deg);
+  }
+  33% {
+    transform: translateX(-30px) rotate(10deg);
+  }
+  66% {
+    transform: translateX(30px) rotate(-10deg);
+  }
+  100% {
+    bottom: calc(100% + 100px);
+    transform: translateX(0) rotate(0deg);
+  }
+}

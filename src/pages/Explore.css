@@ -1,0 +1,211 @@
+/* EXPLORE PAGE SPECIFIC STYLES */
+.explore-sidebar {
+  border-right: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section {
+  padding: 2rem;
+  flex: 1;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.filter-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-pill {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.filter-pill.active {
+  background-color: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.sidebar-footer {
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.text-sm {
+  font-size: 0.85rem;
+}
+
+/* MAIN AREA */
+.explore-main {
+  background-color: var(--bg-secondary);
+  padding: 2rem 4rem;
+}
+
+.explore-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.results-count {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.sort-dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+/* WATERFALL GRID */
+.waterfall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 3rem;
+}
+
+.waterfall-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.waterfall-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.waterfall-bars {
+  display: flex;
+  height: 220px; /* Taller and more impactful */
+  width: 100%;
+}
+
+.waterfall-color {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+}
+
+.waterfall-color:hover {
+  flex: 2;
+}
+
+.color-hover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.waterfall-color:hover .color-hover-overlay {
+  opacity: 1;
+}
+
+.waterfall-footer {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.waterfall-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.palette-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.icon-btn {
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: #fee2e2; /* light red */
+  color: #ef4444; /* red */
+}
+
+.btn-preview-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-preview-large:hover {
+  background-color: var(--accent-primary);
+  color: white;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>PaletteVerse - Ultimate Color Palette Generator</title>
+    <meta name="title" content="PaletteVerse - Ultimate Color Palette Generator" />
+    <meta name="description" content="Create, explore, and test beautiful color palettes. Use our advanced color tools, gamified generators, and live preview to perfect your UI/UX designs." />
+    <meta name="keywords" content="color palette generator, UI design, color tool, UX colors, web design, color scheme, paletteverse" />
+    <meta name="author" content="PaletteVerse" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paletteverse.vercel.app/" />
+    <meta property="og:title" content="PaletteVerse - Ultimate Color Palette Generator" />
+    <meta property="og:description" content="Create, explore, and test beautiful color palettes. Use our advanced color tools, gamified generators, and live preview to perfect your UI/UX designs." />
+    <meta property="og:image" content="https://paletteverse.vercel.app/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://paletteverse.vercel.app/" />
+    <meta property="twitter:title" content="PaletteVerse - Ultimate Color Palette Generator" />
+    <meta property="twitter:description" content="Create, explore, and test beautiful color palettes. Use our advanced color tools, gamified generators, and live preview to perfect your UI/UX designs." />
+    <meta property="twitter:image" content="https://paletteverse.vercel.app/og-image.png" />
+    
+    <link rel="canonical" href="https://paletteverse.vercel.app/" />
+  </head>
+  <body>
+    <div id="root">
+      <style>
+        .initial-loader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          width: 100vw;
+          background-color: #0f172a; /* matches a dark aesthetic */
+        }
+        .initial-loader svg {
+          width: 80px;
+          height: 80px;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          color: #38bdf8;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: .5; transform: scale(0.95); }
+        }
+      </style>
+      <div class="initial-loader">
+        <!-- SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
