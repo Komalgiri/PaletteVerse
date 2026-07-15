@@ -25,12 +25,15 @@ function AnimatedRoutes() {
   );
 }
 
+import { Analytics } from '@vercel/analytics/react'
+
 function App() {
   return (
     <Router>
       <div className="app-container">
         <Navbar />
         <AnimatedRoutes />
+        <Analytics />
       </div>
     </Router>
   )
