@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
@@ -9,10 +10,7 @@ export const Navbar: React.FC = () => {
     <nav className="navbar glass-panel">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <svg className="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--accent-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"></path>
-          </svg>
+          <img src={logo} alt="PaletteVerse Logo" className="logo-icon" style={{ width: 32, height: 32, objectFit: 'contain' }} />
           <span className="logo-text">Palette<span style={{ color: 'var(--accent-primary)' }}>Verse</span></span>
         </Link>
         <div className="navbar-links">
