@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paletteverse.vercel.app/sitemap.xml
+Sitemap: https://palette-verse.vercel.app/sitemap.xml
