@@ -12,10 +12,9 @@ PaletteVerse is an interactive color palette and brand-kit playground designed f
 
 ## ✨ Overview
 
-<div align="center">
-  <video src="https://github.com/Komalgiri/PaletteVerse/raw/main/src/assets/pv.mp4" controls width="100%"></video>
-  <p><em>PaletteVerse Demo Video</em></p>
-</div>
+https://github.com/Komalgiri/PaletteVerse/raw/main/src/assets/pv.mp4
+
+*PaletteVerse Demo Video*
 
 Choosing the right colors is one of the most important parts of creating a consistent visual identity. PaletteVerse brings palette discovery, customization, brand-kit experimentation, and interface previews together in one interactive experience.
 
