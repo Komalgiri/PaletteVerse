@@ -1,7 +1,8 @@
-# 🎨 PaletteVerse
-
-Discover colors. Create palettes. Build beautiful interfaces.
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Komalgiri/PaletteVerse/main/src/assets/logo.png" height="120" alt="PaletteVerse Logo" />
+  <h1>PaletteVerse</h1>
+  <p>Discover colors. Create palettes. Build beautiful interfaces.</p>
+</div>
 PaletteVerse is an interactive color palette and brand-kit playground designed for UI/UX designers, frontend developers, and creative builders. Explore curated color combinations, generate custom palettes, experiment with typography, preview colors in interface mockups, and discover new combinations through playful color mini-games.
 
 🌐 **Live Demo:** [palette-verse.vercel.app](https://palette-verse.vercel.app/)
